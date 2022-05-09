@@ -1,0 +1,82 @@
+
+configuration {
+  sidebar-mode: true;
+/*  kb-mode-next: "alt+Right";
+  kb-mode-previous: "alt+Left";
+font: "JetBrains Mono Medium Itallic Nerd Font 11";
+font: "DejaVu Sans Mono 9";*/
+font: "JetBrainsMono Nerd Font Medium 10";
+  dmenu {
+    display-name: "直";
+  }
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  bg: #00000000;
+  bg-alt: #3B4252;
+  fg: #81A1C1;
+  fg-alt: #EBCB8B;
+
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+  border-radius: 8px;
+  height: 600px;
+  location: center;
+  fullscreen: true;
+  padding: 10% 30%;
+}
+
+mainbox {
+  children: [inputbar,listview];
+}
+
+inputbar {
+  background-color: @bg;
+  children: [prompt, entry];
+}
+
+entry {
+  background-color: inherit;
+  padding: 12px 3px;
+}
+
+prompt {
+  background-color: inherit;
+  padding: 12px;
+}
+
+listview {
+  lines: 10;
+}
+
+element {
+  children: [element-icon, element-text];
+}
+
+element-icon {
+  padding: 10px 10px;
+}
+
+element-text {
+  padding: 10px 0;
+}
+
+element-text selected {
+  text-color: @fg-alt;
+}
+
+
+

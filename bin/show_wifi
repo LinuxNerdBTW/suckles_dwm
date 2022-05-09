@@ -1,0 +1,3 @@
+#!/usr/bin/bash 
+
+nmcli d wifi list | rofi -dmenu -theme ~/.config/bspwm/rofi-collection/nord/nord_wifi.rasi
