@@ -1,0 +1,96 @@
+
+
+configuration {
+  font: "JetBrainsMono Nerd Font Medium 10";
+  terminal: "termite";
+  drun {
+    display-name: "גּ";
+  }
+
+  emoji {
+    display-name: "👉🏻";
+  }
+  window {
+    display-name: "缾";
+  }
+
+  timeout {
+    delay: 30;
+    action: "kb-cancel";
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  bg: #282a36;
+  fg: #50fa7b;
+  blue: #6272a4;
+  purple: #bd93f9;
+  cyan: #8be9fd;
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+ height: 300px;
+ width: 450px;
+/* border: 2px 2px 2px 2px;
+ border-radius: 5px;
+ border-color: @fg;*/
+ border-radius: 4px;
+ padding: 20px 20px;
+
+}
+
+mainbox {
+  children: [inputbar, listview];
+  background-color: @bg;
+}
+
+inputbar {
+  background-color: @bg;
+  children: [prompt, entry];
+ /* border: 2px 3px 2px 3px;
+  border-radius: 10px;
+  border-color: @purple;*/
+  padding: 1px 1px;
+
+}
+
+entry {
+  background-color: inherit;
+  padding: 10px;
+}
+
+prompt {
+  background-color: inherit;
+  padding: 12px;
+}
+
+listview {
+  scrollbar: false;
+
+}
+
+element {
+  children: [element-text];
+  text-color: @purple;
+}
+
+element-icon {
+  padding: 5px 12px;
+}
+
+element-text {
+  padding: 10px 10px;
+  text-color: inherit;
+}
+
+element selected {
+  text-color: @fg;
+}
+
