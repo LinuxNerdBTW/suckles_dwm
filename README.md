@@ -59,7 +59,7 @@ just you need to install picom from this fork , so i have given link below , ins
 One by One Go to dmenu && st && slstatus && dwm directory and run the following command to install these 
 * make && sudo make clean install
 
-### Install these dependencies if you face any error while compiling DWM && remember package name might be different based upon your distro but dont worry search the package name using your package manger and install it 🥰
+Install these dependencies if you face any error while compiling DWM && remember package name might be different based upon your distro but dont worry search the package name using your package manger and install it 🥰
 
 * gcc 
 * make
