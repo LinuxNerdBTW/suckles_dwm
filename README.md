@@ -50,7 +50,7 @@ just you need to install picom from this fork , so i have given link below , ins
 * `cp -rv fonts ~/.fonts` 👉🏻  Copy fonts directory to .fonts in home directory
 * `cp -rv .config/* ~/.config/` 👉🏻 Copy contents of .config directory to .config in home directory 
 * `cp -rv bin ~/` 👉🏻 copy bin directory to home directory 
-* `cp autostart ~/.autostart && chmod u+x ~/.autostart/autostart.sh` 👉🏻 copy autostart to .autostart in home directory
+* `cp autostart/* ~/.autostart/ && chmod u+x ~/.autostart/autostart.sh` 👉🏻 copy autostart to .autostart in home directory
 * `cp .xinitrc ~/ && chmod u+x ~/.xinitrc` 👉🏻 copy .xinitrc to home directory 
 * `cp .bashrc ~/ ` 👉🏻 copy .bashrc to home directory [ bash resource file ]
 
@@ -59,23 +59,23 @@ just you need to install picom from this fork , so i have given link below , ins
 ---
 
 ## Further Installation 
-Wanna Customize Ranger like mine ? 
+* Wanna Customize Ranger like mine ? 
 Go through with this video i have given detailed instruction here : 
-https://www.youtube.com/watch?v=uGV9Fdi2ADo
+** https://www.youtube.com/watch?v=uGV9Fdi2ADo
 
 Learn how to customize DWM ? 
-DWM Showcase Video : 
-https://www.youtube.com/watch?v=uUOQDAlk894&t=37s
+* DWM Showcase Video : 
+** https://www.youtube.com/watch?v=uUOQDAlk894&t=37s
 
-Installation Video : 
-https://www.youtube.com/watch?v=3fcaikKJF9I&t=122s
+* DWM Installation Video : 
+** https://www.youtube.com/watch?v=3fcaikKJF9I&t=122s
 
-Customization Video : 
-https://www.youtube.com/watch?v=FBk1k1ppXQk
+* DWM Customization Video : 
+** https://www.youtube.com/watch?v=FBk1k1ppXQk
 
-Wanna Learn how to customize rofi : 
+* Wanna Learn how to customize rofi : 
 
-https://www.youtube.com/watch?v=fFCVALIDk5k&t=28s
+** https://www.youtube.com/watch?v=fFCVALIDk5k&t=28s
 
 ---
 
