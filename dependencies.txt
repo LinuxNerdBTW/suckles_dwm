@@ -15,3 +15,14 @@ dunst
 picom [ jonaburg fork ] 
 xfce4-power-manager
 gnome polkit agent 
+
+
+gcc 
+make
+libx11-6
+libx11
+libx11-dev
+libxft2 libxft-dev
+libxinerama-dev
+libxinerama1
+

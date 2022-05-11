@@ -29,6 +29,7 @@ I have not made any installation script because there might be some erros while 
 * dunst 👉🏻 light weight notification daemon 
 * pavucontrol 👉🏻 pulse audio volume control 
 * betterlockscreen 👉🏻 light weight screen locker
+ 
 
 You need to install all the required dependencies & becareful on the version , just install the latest version . you can exclude some of them as well like if you like CLI then you can install ranger as a default file manager , its not necessary to install pcmanfm and you are not compulsory to use software that i have use like you can replace flameshot with xfce4-screenshooter . Just keep in mind that you need to install those softwares .
 
@@ -56,10 +57,25 @@ just you need to install picom from this fork , so i have given link below , ins
 
 ### Finally lets install the DWM && st && dmenu && slstatus
 One by One Go to dmenu && st && slstatus && dwm directory and run the following command to install these 
-* `make && sudo make clean install`
+* make && sudo make clean install
+
+### Install these dependencies if you face any error while compiling DWM && remember package name might be different based upon your distro but dont worry search the package name using your package manger and install it 🥰
+
+* gcc 
+* make
+* libx11-6
+* libx11
+* libx11-dev
+* libxft2 libxft-dev
+* libxinerama-dev
+* libxinerama1
 
 Remember you have to do this with dmenu && st && slstatus && dwm 
 if you got any error while compiling and installing it check for the library and still not solved then leave your issue on issue section 
+
+### Configuring DWM for Lightdm or Any Display Manager 
+ * `sudo cp -v dwm.desktop /usr/share/xsessions/dwm.desktop` 👉 desktop file for dwm
+ * `sudo cp mydwm /usr/local/bin/ && sudo chmod +x /usr/local/bin/mydwm` 👉 script to launch dwm
 
 ---
 
@@ -101,7 +117,7 @@ Learn how to customize DWM ?
 ![Screenshot](Screenshots/window-switcher.png)
 
 #### NOTE IF you want ot use window switcher then you need apply this patch on your dwm .. 
-`https://dwm.suckless.org/patches/ewmhtags/`
+👉 `https://dwm.suckless.org/patches/ewmhtags/`
 
 
 ### Rofi emoji Launcher 
