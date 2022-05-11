@@ -56,7 +56,7 @@ just you need to install picom from this fork , so i have given link below , ins
 
 ### Finally lets install the DWM && st && dmenu && slstatus
 One by One Go to dmenu && st && slstatus && dwm directory and run the following command to install these 
-* make && sudo make clean install
+* `make && sudo make clean install`
 
 Remember you have to do this with dmenu && st && slstatus && dwm 
 if you got any error while compiling and installing it check for the library and still not solved then leave your issue on issue section 
