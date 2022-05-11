@@ -1,0 +1,17 @@
+termite 
+kitty
+pavucontrol
+alsamixer -> alsa-utils
+betterlockscreen
+flameshot 
+rofi  
+ncdu 
+rofi-emoji 
+fzf 
+ranger 
+btop 
+feh 
+dunst 
+picom [ jonaburg fork ] 
+xfce4-power-manager
+gnome polkit agent 

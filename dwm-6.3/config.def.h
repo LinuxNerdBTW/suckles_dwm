@@ -9,15 +9,6 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 6;       /* vertical padding of bar */
 static const int sidepad            = 6;       /* horizontal padding of bar */
 static const char *fonts[]          = { "JetBrainsMono Medium Nerd Font:size=10" };
-static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=11";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-static const char col_white[]	    = "#ffffff";
-static const char col_red[]	    = "#ff0a0a";
-static const char col_blue[]	    = "#0022ff";
 
 // dracula color plate 
 static const char dra_bg[]       = "#282a36";
@@ -30,6 +21,9 @@ static const char dra_purple[]	 = "#bd93f9";
 static const char dra_red[]	     = "#ff5555";
 static const char dra_yellow[]	 = "#f1fa8c";
 
+
+// Top Bar Color Customization 
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { dra_pink, dra_bg, dra_bg },
@@ -37,10 +31,10 @@ static const char *colors[][3]      = {
 	[SchemeStatus]  = { dra_green, dra_bg,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
 	//TagBar Left
 	[SchemeTagsSel]  = { dra_green, dra_bg,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-        [SchemeTagsNorm]  = { dra_pink, dra_bg,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm]  = { dra_pink, dra_bg,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
 	// InforBar Middle
-        [SchemeInfoSel]  = { dra_purple, dra_bg,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-        [SchemeInfoNorm]  = { dra_cyan, dra_bg,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]  = { dra_purple, dra_bg,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]  = { dra_cyan, dra_bg,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
@@ -52,6 +46,9 @@ static const unsigned int ulinestroke	= 2;	/* thickness / height of the underlin
 static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
 static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
+
+// Application Floating Rules 
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -59,11 +56,11 @@ static const Rule rules[] = {
 	 */
 	/* class            instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",           NULL,       NULL,       0,            1,               -1 },
-	{ "Pavucontrol",    NULL,	NULL,	    0,	          1,	           -1 },
-        { "st",		    NULL,	NULL,       0,		  1,		   -1 },
-        { "kitty",          NULL,       NULL,       0,            1,               -1 },
-        { "SimpleScreenRecorder",          NULL,       NULL,       0,            1,               -1 },
-        { "simplescreenrecorder",          NULL,       NULL,       0,            1,               -1 },
+	{ "Pavucontrol",    NULL,		NULL,	    0,	          1,	           -1 },
+    { "st",		        NULL,		NULL,       0,			  1,		  	   -1 },
+    { "kitty",          NULL,       NULL,       0,            1,               -1 },
+    { "SimpleScreenRecorder",NULL,  NULL,       0,            1,               -1 },
+    { "simplescreenrecorder",NULL,  NULL,       0,            1,               -1 },
 
 };
 
@@ -78,7 +75,7 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
-        { NULL,       NULL },
+    { NULL,       NULL },
 };
 
 /* key definitions */
@@ -100,8 +97,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4,"-c","-l","20", NULL };
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *dmenuterm[] = { "dmenu_term", NULL };
-static const char *dmenuswitch[] = { "switch", NULL };
-static const char *termcmd[]  = { "termite","--config","/home/mangal/.config/dwm/termite/config" };
+static const char *termcmd[]  = { "termite", NULL };
 static const char *float_term[] = { "st",NULL };
 
 // Custom Apps....
@@ -111,9 +107,12 @@ static const char *kitty_ranger[] = { "kitty","-e","ranger", NULL };
 static const char *kitty_alsamixer[] = {"kitty","-e","alsamixer", NULL };
 static const char *pavucontrol[] = { "pavucontrol" };
 static const char *ncdu[] = { "kitty","-e","ncdu","--color","dark", NULL };
-// powermenu
+
+
+// powermenun
 static const char *powermenu[] = { "powermenu" };
-static const char *wifi_menu[] = { "/home/mangal/bin/rofi-network-manager/rofi-network-manager.sh"};
+static const char *wifi_menu[] = { "bin/rofi-network-manager/rofi-network-manager.sh"}; // its in home directory 
+
 // screen locker
 static const char *betterlockscreen[] = { "betterlockscreen","--lock",NULL };
 static const char *fuzzyfinder[] = { "kitty","-e","fzf", NULL };
@@ -125,31 +124,29 @@ static const char *flameshot[] = {"flameshot","gui", NULL };
 static const char *rofiapp[] = {"rofi","-show","drun","-modi","drun",NULL };
 static const char *rofiemo[] = {"rofi","-show","emoji","-modi","emoji",NULL };
 static const char *rofiwin[] = {"rofi","-show","window","-modi","window",NULL };
-static const char *lab[] = {"termite","-e","lab"};
 
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-    { MODKEY|ShiftMask,                       XK_l,      spawn,          {.v = lab } },
-    { MODKEY,                       XK_a,      spawn,          {.v = rofiapp } },
-    { MODKEY,                       XK_e,      spawn,          {.v = rofiemo } },
-    { ALTKEY,                       XK_Tab,      spawn,          {.v = rofiwin } },
-    { MODKEY,                       XK_r,      spawn,          {.v = dmenuterm } },
-    { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-    { 0,                            XK_Print,  spawn,          {.v = flameshot } },
+  { MODKEY,                       XK_a,      spawn,          {.v = rofiapp } },
+  { MODKEY,                       XK_e,      spawn,          {.v = rofiemo } },
+  { ALTKEY,                       XK_Tab,      spawn,          {.v = rofiwin } },
+  { MODKEY,                       XK_r,      spawn,          {.v = dmenuterm } },
+  { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+  { 0,                            XK_Print,  spawn,          {.v = flameshot } },
 	{ ControlMask|ALTKEY,           XK_f,      spawn,          {.v = fuzzyfinder } },
-    { MODKEY, 			            XK_l,	   spawn,	       {.v = betterlockscreen } },
-    { ControlMask|ALTKEY,           XK_d,      spawn,          {.v = ncdu } },
+  { MODKEY, 			                XK_l,	   spawn,	       {.v = betterlockscreen } },
+  { ControlMask|ALTKEY,           XK_d,      spawn,          {.v = ncdu } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = float_term } },
-	{ MODKEY,			XK_n,	   spawn,          {.v = wifi_menu } },
-  	{ MODKEY,                       XK_v,      spawn,          {.v = pavucontrol } },
+	{ MODKEY,			                  XK_n,	   spawn,          {.v = wifi_menu } },
+  { MODKEY,                       XK_v,      spawn,          {.v = pavucontrol } },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = kitty_alsamixer } },
- 	{ ControlMask|ALTKEY,		    XK_h,      spawn,          {.v = kitty_htop } },
+ 	{ ControlMask|ALTKEY,		        XK_h,      spawn,          {.v = kitty_htop } },
 	{ ControlMask|ALTKEY,           XK_b,      spawn,          {.v = kitty_btop } },
-	{ MODKEY|ShiftMask,		        XK_s,	   spawn,	       {.v = kitty_ranger} },
+	{ MODKEY|ShiftMask,		          XK_s,	   spawn,	       {.v = kitty_ranger} },
 	{ MODKEY|ShiftMask,             XK_Left,   movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Right,  movestack,      {.i = -1 } },
-	{ ALTKEY,			            XK_F4,	   spawn,	       {.v = powermenu } },
+	{ ALTKEY,			                  XK_F4,	   spawn,	       {.v = powermenu } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+#cmd=$(dmenu_path | dmenu "$@" | xargs kitty -e &)
+
+TERM="kitty"
+cmd=$(dmenu_path | dmenu "$@")
+
+if [ -z "$cmd" ]
+then
+	echo NULL
+
+elif [ ! -z "$cmd" ]
+then
+	$TERM -e $cmd
+
+fi
+
