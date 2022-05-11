@@ -61,21 +61,21 @@ just you need to install picom from this fork , so i have given link below , ins
 ## Further Installation 
 * Wanna Customize Ranger like mine ? 
 Go through with this video i have given detailed instruction here : 
-** https://www.youtube.com/watch?v=uGV9Fdi2ADo
+👉 https://www.youtube.com/watch?v=uGV9Fdi2ADo
 
 Learn how to customize DWM ? 
 * DWM Showcase Video : 
-** https://www.youtube.com/watch?v=uUOQDAlk894&t=37s
+👉 https://www.youtube.com/watch?v=uUOQDAlk894&t=37s
 
 * DWM Installation Video : 
-** https://www.youtube.com/watch?v=3fcaikKJF9I&t=122s
+👉 https://www.youtube.com/watch?v=3fcaikKJF9I&t=122s
 
 * DWM Customization Video : 
-** https://www.youtube.com/watch?v=FBk1k1ppXQk
+👉 https://www.youtube.com/watch?v=FBk1k1ppXQk
 
 * Wanna Learn how to customize rofi : 
 
-** https://www.youtube.com/watch?v=fFCVALIDk5k&t=28s
+👉 https://www.youtube.com/watch?v=fFCVALIDk5k&t=28s
 
 ---
 
